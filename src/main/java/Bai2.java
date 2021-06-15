@@ -5,29 +5,20 @@ import java.util.regex.Pattern;
 public class Bai2 {
     public void inputPass()
     {
+        String correctPass="^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Z\\d@$!%*?&]{10,}$";
         Scanner sc= new Scanner(System.in);
         System.out.println("Bạn hãy nhập mật khẩu của bạn");
         String str= sc.nextLine();
-        if(str.length()>=10) {
-            System.out.println("Mật khẩu đúng định dạng");
-            validatePass(str);
-        }
-        else {
             if (str.length() < 10) {
                 System.out.println("Mật khẩu yếu");
             }
+            else {
+                if(str.matches(correctPass))
+                {
+                    System.out.println("Mật khẩu mạnh");
+                }
+                else System.out.println("Mật khẩu chưa đủ mạnh");
         }
 
-    }
-    public boolean validatePass(String pass)
-    {
-        CharSequence inputStr = pass;
-        String correctPass="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{10,}$";
-        Pattern pattern=Pattern.compile(correctPass,Pattern.CASE_INSENSITIVE);
-        Matcher matcher= pattern.matcher(inputStr);
-        if(matcher.matches())
-            return true;
-        else
-            return false;
     }
 }

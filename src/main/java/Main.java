@@ -9,8 +9,8 @@ public class Main {
 //        bai1.count();
 //        bai1.UpperCase();
         //---Bài 2
-//        Bai2 b2= new Bai2();
-//        b2.inputPass();
+        Bai2 b2= new Bai2();
+        b2.inputPass();
 
         //-- Bài 3
 //        Bai3 b3= new Bai3();
