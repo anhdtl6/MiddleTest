@@ -7,7 +7,7 @@ public class Bai2 {
     {
         String correctPass="^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Z\\d@$!%*?&]{10,}$";
         Scanner sc= new Scanner(System.in);
-        System.out.println("Bạn hãy nhập mật khẩu của bạn");
+        System.out.println("Bạn hãy nhập mật khẩu");
         String str= sc.nextLine();
             if (str.length() < 10) {
                 System.out.println("Mật khẩu yếu");
